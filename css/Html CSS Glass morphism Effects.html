@@ -1,0 +1,175 @@
+<!-- https://www.youtube.com/watch?v=VKcbZGW1woc&t=16s -->
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+    rel="stylesheet"
+  />
+  <style>
+    *
+    {
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #161623;
+    }
+
+    body::before
+    {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(#f00, #f0f);
+      clip-path: circle(30% at right 70%);
+    }
+
+    body::after
+    {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(#2196f3, #e91e63);
+      clip-path: circle(20% at 10% 10%);
+    }
+    
+    .container
+    {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1200px;
+      flex-wrap: wrap;
+      z-index: 9;
+    }
+    .container .card
+    {
+      position: relative;
+      width: 280px;
+      height: 400px;
+      margin: 30px;
+      box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+      border-radius: 15px;
+      background: rgba(255,255,255,0.1);
+      overflow: hidden;
+      display: flex;
+      justify-content:center;
+      align-items:center;
+      border-top:1px solid rgba(255,255,255,0.5);
+      border-left:1px solid rgba(255,255,255,0.5);
+      backdrop-filter:blur(5px);
+     
+    }
+
+    .container .card .content
+    {
+      padding:20px;
+      text-align:center;
+      opacity: 0;
+      transform: translateY(100px);
+      transition:0.5s;
+    }
+    .container .card:hover .content
+    {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    .container .card .content h2
+    {
+      position: absolute;
+      top: -60px;
+      right: 30px;
+      font-size:8em;
+      color:rgba(255,255,255,0.05);
+      pointer-events: none;
+    }
+    .container .card .content h3
+    {
+      font-size:1.8em;
+      color:#fff;
+      z-index:1;
+    }
+    .container .card .content p
+    {
+      font-size:1em;
+      color:#fff;
+      font-weight:300;
+    }
+
+    .container .card .content a
+    {
+      position: relative;
+      display: inline-block;
+      padding:8px 20px;
+      margin-top: 15px;
+      background: #fff;
+      color:#000;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+      <div class="card">
+          <div class="content">
+              <h2>01</h2>
+              <h3>Card One</h3>
+              <p>Disclaimer video is for educational purpose only. Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism</p>
+              <a href="#">Read More</a>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="content">
+              <h2>02</h2>
+              <h3>Card Two</h3>
+              <p>Disclaimer video is for educational purpose only. Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism</p>
+              <a href="#">Read More</a>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="content">
+              <h2>03</h2>
+              <h3>Card Three</h3>
+              <p>Disclaimer video is for educational purpose only. Copyright Disclaimer Under Section 107 of the Copyright Act 1976, allowance is made for "fair use" for purposes such as criticism</p>
+              <a href="#">Read More</a>
+          </div>
+      </div>
+  </div>
+  <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+      max: 25,
+      speed: 400,
+      glare:true,
+      "max-glare":1,
+    });
+    
+  </script>
+</body>
+</html>
